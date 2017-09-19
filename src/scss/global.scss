@@ -1,0 +1,151 @@
+body {
+    /*background-position:   center; */
+    background-size: cover;
+    margin: 0 !important;
+    overflow-x: hidden;
+    .overlay {
+        position: absolute;
+        height: 1385px;
+        width: 100vw;
+        background: radial-gradient(circle at center,rgba(0,0,0,0.8) 0, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0.7) 100%);
+        z-index: 10;
+        background-attachment: fixed;
+    }
+}
+
+.img-bg {
+    background:  url('../images/stellar.jpeg'), rgba(0,0,0,0.8);
+    background-size: cover;
+    height: 1385px;
+    width: 100vw;
+    background-attachment: fixed;
+}
+
+
+.text {
+    position: absolute;
+    z-index: 11;
+    color: white;
+    top: 160px;
+    left: 430px;
+}
+.text p {
+    padding: 0 60px 30px 60px;
+    margin-top: 0;
+    padding-right: 90px;
+}
+h2 {
+    position: absolute;
+    z-index: 11;
+    color: white;
+    top: 60px;
+    left: 430px;
+    margin-top: 0;
+    margin-left: 60px;
+}
+
+
+html {
+    /*filter: blur(10px);*/
+}
+
+img {
+
+}
+
+.container {
+  width: 560px;
+  height: 360px;
+  position: absolute;
+  perspective: 800px;
+  left:0; right:0; bottom:0; top: 0; margin: auto;
+  filter: blur(10px);
+  /*background-attachment: fixed;*/
+    position: fixed;
+}
+
+#carousel {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  position: absolute;
+  transform-style: preserve-3d;
+  transform: translateZ(-800px) rotateY(0deg);
+  div {
+    margin: 0;
+    display: block;
+    position: absolute;
+    /*width: 186px;*/
+    /*min-height: 116px;*/
+    height: 100%;
+    width: 100%;
+    /*border: 2px solid white;*/
+  }
+
+}
+
+#carousel div:nth-child(1) { transform: rotateY(   0deg ) translateZ( 580px ); }
+#carousel div:nth-child(2) { transform: rotateY(  60deg ) translateZ( 580px ); }
+#carousel div:nth-child(3) { transform: rotateY(  120deg ) translateZ(580px ); }
+#carousel div:nth-child(4) { transform: rotateY(  180deg ) translateZ(580px ); }
+#carousel div:nth-child(5) { transform: rotateY(  240deg ) translateZ(580px ); }
+#carousel div:nth-child(6) { transform: rotateY( 300deg ) translateZ( 580px ); }
+
+#alaska {
+    background-image: url('../images/alaska.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    /*background-size: 100%;*/
+    background-size: cover;
+}
+#papa {
+    background-image: url('../images/papa2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    /*background-size: 100%;*/
+    background-size: cover;
+}
+#days {
+    background-image: url('../images/days.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    /*background-size: 100%;*/
+    background-size: cover;
+}
+#louvre {
+    background-image: url('../images/louvre.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    /*background-size: 100%;*/
+    background-size: cover;
+}
+#nao {
+    background-image: url('../images/nao.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    /*background-size: 100%;*/
+    background-size: cover;
+}
+#langues {
+    background-image: url('../images/langues.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    /*background-size: 100%;*/
+    background-size: cover;
+}
+
+
+/*#btnController {
+    position: absolute;
+    bottom: 30px;
+    left: 435px;
+
+}
+#btnController li {
+    border: 2px solid white;
+    border-radius: 200px;
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    margin-right: 5px;
+}*/

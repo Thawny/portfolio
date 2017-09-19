@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="animate/animate.css"> -->
+    <link rel="stylesheet" href="css/global.css" />
+    <title>Document</title>
+</head>
+<style>
+    #intro {
+        color: white;
+        position: absolute;
+        bottom: 80px;
+        left: 38%;
+    }
+    #deux {
+        color: white;
+        position: absolute;
+        bottom: 80px;
+        left: 38%;
+    }
+    img {
+        width: 400px;
+        position: relative;
+        z-index: 15;
+        position: inline-block;
+        margin-left: 30px;
+        margin-top: 30px;
+    }
+    .projet-alaska {
+        top: 0;
+        position: absolute;
+        width: 100vw;
+        border: 1px solid red;
+    }
+</style>
+<body>
+
+    <div class="overlay"></div>
+
+    <div class="img-bg"></div>
+
+    <section id="section" class="container">
+          <div id="carousel">
+                <div id="louvre" class=""></div>
+                <div id="alaska"></div>
+                <div id="papa"></div>
+                <div id="nao"></div>
+                <div id="langues"></div>
+                <div id="days"></div>
+          </div>
+    </section>
+
+    <section class="projet-alaska">
+        <img src="images/maquette-al.png" alt="">
+    </section>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/frontend.js"></script>
+<script>
+
+</script>
+<script>
+var isMouseDown = false;
+    var count = 1;
+    var lastPageX = 0;
+    var lastRotate = 1;
+    var mousemove = function(e){
+        console.log(count)
+        count++;
+        if (isMouseDown) {
+            if (lastPageX < e.pageX) {
+                lastPageX = e.pageX;
+                lastRotate++;
+                document.getElementById('carousel').style.transform = "translateZ(-800px) rotateY("+lastRotate +"deg)";
+            }
+            else if (lastPageX > e.pageX) {
+                lastPageX = e.pageX;
+                lastRotate--;
+                document.getElementById('carousel').style.transform = "translateZ(-800px) rotateY("+lastRotate +"deg)";
+            }
+        }
+
+    }
+     section = document.getElementById('section');
+    // section.addEventListener('mousedown', function(){
+    //     console.log('mousedown')
+    //     section.addEventListener('mousemove', mousemove);
+    //     document.addEventListener('mouseup', function(){
+    //         console.log('mouseup')
+    //         section.removeEventListener(mousemove, section)
+    //     })
+    // })
+
+    section.addEventListener('mousedown', function(){
+        isMouseDown = true;
+        console.log('mousedown')
+        section.addEventListener('mousemove', mousemove);
+        document.addEventListener('mouseup', function(){
+            console.log('mouseup')
+            isMouseDown = false;
+        })
+    })
+</script>
+</body>
+</html>
