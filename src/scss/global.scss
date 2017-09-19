@@ -1,15 +1,24 @@
+@import 'projets';
+
 body {
     /*background-position:   center; */
     background-size: cover;
     margin: 0 !important;
     overflow-x: hidden;
-    .overlay {
+    #overlay {
         position: absolute;
         height: 1385px;
         width: 100vw;
+        // for animation
+        opacity: 0;
+        transition: opacity 1.5s;
+        // end for animation
         background: radial-gradient(circle at center,rgba(0,0,0,0.8) 0, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0.7) 100%);
         z-index: 10;
         background-attachment: fixed;
+    }
+    .to-black {
+        opacity: 1 !important;
     }
 }
 
@@ -21,6 +30,9 @@ body {
     background-attachment: fixed;
 }
 
+.hidden {
+    display: none;
+}
 
 .text {
     position: absolute;
@@ -34,15 +46,15 @@ body {
     margin-top: 0;
     padding-right: 90px;
 }
-h2 {
-    position: absolute;
-    z-index: 11;
-    color: white;
-    top: 60px;
-    left: 430px;
-    margin-top: 0;
-    margin-left: 60px;
-}
+// h2 {
+//     position: absolute;
+//     z-index: 11;
+//     color: white;
+//     top: 60px;
+//     left: 430px;
+//     margin-top: 0;
+//     margin-left: 60px;
+// }
 
 
 html {
@@ -59,9 +71,15 @@ img {
   position: absolute;
   perspective: 800px;
   left:0; right:0; bottom:0; top: 0; margin: auto;
-  filter: blur(10px);
+  // for animation
+  filter: blur(0px);
+  transition: filter 1.5s;
+  // end form animation
   /*background-attachment: fixed;*/
-    position: fixed;
+  position: fixed;
+}
+.to-blur {
+    filter: blur(10px);
 }
 
 #carousel {
