@@ -54,12 +54,12 @@
 
     <section id="section" class="container">
           <div id="carousel">
-                <div id="louvre" class=""></div>
-                <div id="alaska"></div>
-                <div id="papa"></div>
-                <div id="nao"></div>
-                <div id="langues"></div>
-                <div id="days"></div>
+                <div id="louvre" class="look"></div>
+                <div id="alaska" class="look"></div>
+                <div id="papa" class="look"></div>
+                <div id="nao" class="look"></div>
+                <div id="langues" class="look"></div>
+                <div id="days" class="look"></div>
           </div>
     </section>
 
@@ -105,7 +105,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="js/frontend.js"></script>
 <script>
-    // $('body').click(function(){console.log('dbclick happened')})
+    $(document).on('click', (e) => console.log(e.target))
 </script>
 <script>
 var isMouseDown = false;
